@@ -1,0 +1,567 @@
+/*horizontal rule*/
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, #fff, #0a446d);
+  box-shadow: 0 1px 2.5px rgba(2, 46, 102, 0.723), 0 1px 2px rgba(2, 46, 102, 0.723);
+  margin: 20px 0;
+}
+
+.company-start{
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Libre Baskerville;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom,#4682A9,#fff );
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floating-object {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.51);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: float 10s linear infinite;
+}
+
+.floating-object img {
+  width: 100%; /* Ensures the image takes the full size of the container */
+  height: auto;
+  border-radius: 50%; /* Ensures the image is circular */
+}
+
+.cloud {
+  position: absolute;
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  opacity: 0.7;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Customize each object individually */
+
+/* Floating objects */
+.floating-object:nth-of-type(1) {
+  width: 75px;
+  height: 75px;
+  top: 17%;
+  left: 10%;
+  animation-duration: 5s;
+}
+
+.floating-object:nth-of-type(2) {
+  width: 140px;
+  height: 140px;
+  top: 46%;
+  left: 45%;
+  animation-duration: 7s;
+}
+
+.floating-object:nth-of-type(3) {
+  width: 80px;
+  height: 80px;
+  top: 70%;
+  left: 70%;
+  animation-duration: 10s;
+}
+.floating-object:nth-of-type(4) {
+  width: 60px;
+  height: 60px;
+  bottom: 10%;
+  left: 5%;
+  animation-duration: 5s;
+}
+.floating-object:nth-of-type(5) {
+  width: 120px;
+  height: 120px;
+  top: 33%;
+  left: 85%;
+  animation-duration: 6s;
+}
+/*navbar at top */
+/* The navigation bar */
+.navbar {
+  display: inline-flex;
+  justify-content: space-between;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  position: fixed; /* or absolute, fixed, or sticky */
+    z-index: 1; /* Adjust as needed */
+    font-family: Noto Sans;
+}
+
+/* The logo and brand name */
+.navbar-brand {
+  color: rgb(3, 42, 66);
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 20px 20px;
+}
+
+/* Links inside the navbar */
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+  padding: 15px  20px 15px;
+  margin-top: 0px;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 16px;
+}
+
+.navbar-nav .nav-link {
+  color: rgb(8, 27, 39);
+  text-decoration: none;
+  font-size:medium;
+  font-weight: 500;
+  padding: 14px 16px;
+}
+
+/* Change background on mouse-over */
+.navbar-nav .nav-link:hover {
+  color: #000000;
+  font-weight: 800;
+}
+
+/* Responsive navbar */
+@media screen and (max-width: 600px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+}
+
+/*  Home Page*/
+/* Image*/
+
+
+.homepage {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  height: calc(100% - 70px); /* Adjust based on the height of your navbar */
+  
+}
+/*Interactive screen*/
+
+.interactive-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  width:50%;
+}
+
+.flowchart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: 5%;
+}
+.block {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background: rgba(37, 130, 172, 0.914);
+  color: #fff;
+  border: none;
+  text-align: center;
+  font-size: medium;
+  font-family: Libre Baskerville;
+  line-height: 50px;
+  border-radius: 50px;
+  transition: all 0.3s ease; /* This will animate the changes */
+}
+
+.block:hover {
+  background: rgb(3, 60, 95); /* Change color on hover */
+  box-shadow: 0px 0px 20px rgba(17, 4, 112, 0.5); /* Add shadow on hover */
+  transform: scale(1.1); /* Make it pop up on hover */
+}
+
+.arrow {
+  position: absolute;
+  width: 7.5vw; /* Adjust this value as needed */
+  height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 50%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 40px auto; /* Center the container */
+}
+
+/* Faded Image */
+.faded-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+.image-container img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  /* Create a trapezoid shape with a 36-degree angle on the left side */
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Adjust as needed */
+  
+}
+
+.get-started {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(66, 148, 241);
+  color: #eee;
+  border-radius: 25px;
+}
+.get-started:hover{
+  background: rgb(73, 172, 233); /* Change color on hover */
+  box-shadow: 0px 0px 20px rgba(17, 4, 112, 0.5); /* Add shadow on hover */
+  transform: scale(1.1); /* Make it pop up on hover */
+}
+
+
+/* Main content */
+.main {
+  margin-top: 60px; /* Add a top margin to avoid content overlay */
+}
+/*Middle*/
+ .middle{margin-top: 50px;}
+   .company-intro{
+    text-align: center;
+    font-size: x-large;
+   }
+   .intro{
+    margin-top: 0;
+   }
+  .company-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 15px;
+    /*padding: 80px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 250px;
+    padding-left: 250px;
+    box-sizing: border-box;
+  }
+  
+  /*box around each company*/
+  .company-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #f9f4f4; /* Change the color as needed */
+    border-radius: 20px; /* Adjust as needed to get the desired curvature */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 150px;
+    
+  } 
+  .company-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .company-item p {
+    font-size: 17px; /* Adjust as needed to change the size */
+    color: #fff; /* Change the color as needed */
+    font-family: Libre Baskerville;/* Change the font as needed */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .company-list {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  }
+  /*Post*/
+  .post{
+    padding-left: 30px;
+    font-size: 30px; 
+  }
+  .article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .article-item {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  .article-item a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .article-item img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .article-item h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* For tablets: */
+  @media (min-width: 600px) {
+    .article-item {
+      width: 48%;
+    }
+  }
+  
+  /* For desktop: */
+  @media (min-width: 900px) {
+    .article-item {
+      width: 20%;
+    }
+  }
+  /*FAQS*/
+
+  .faq-container {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .faq-column {
+    width: 45%; /* Adjust as needed */
+  }
+  
+  .accordion {
+    background-color: rgba(37, 130, 172, 0.914);
+    color: #e5ecf3;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+    border-radius: 18px 18px 0 0; /* Rounded corners */
+  }
+  
+  .arrow {
+    margin-right: 10px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #c1e3fa6d; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #c1e3fa6d; /* background of answer*/
+    overflow: hidden;
+    border-radius: 0 0 8px 8px; /* Rounded corners for bottom of panel */
+  }
+  
+  .faq-column h2 {
+    margin-bottom: 20px;
+  }
+  
+  .faq-section {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  }
+  /*CHECKLIST*/
+  .checklist-heading {
+    padding-left: 27px;
+    font-size: 30px;
+    text-align: center; /* Center the heading */
+  }
+  
+  .checklist {
+    font-size: 18px;
+    padding: 20px;
+    color: #081f2e;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the checklist items */
+  }
+  
+  .checklist-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c1e3fa6d;
+    padding: 12px 10px 10px 18px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    text-rendering: geometricPrecision;
+    width: 50%; /* Start with a base width */
+  }
+  
+  .checklist-item:nth-child(2) {
+    width: 50%; /* Increase width */
+  }
+  
+  .checklist-item:nth-child(3) {
+    width: 50%; /* Increase width */
+  }
+  
+  .checklist-item:nth-child(4) {
+    width: 50%; /* Increase width */
+  }
+  
+  .checklist-item:nth-child(5) {
+    width: 50%; /* Increase width */
+  }
+  
+  .checklist-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .checklist-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px; /* Smaller size for the checkbox */
+    height: 20px;
+    cursor: pointer;
+    appearance: none;
+    background-color: #fff;
+    border: 3px solid rgb(3, 60, 95);
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checklist-item input[type="checkbox"]:checked {
+    background-color: rgb(3, 60, 95);
+    border-color: rgb(3, 60, 95);
+  }
+  
+  .checklist-item input[type="checkbox"]:checked::before {
+    content: '✔';
+    display: block;
+    text-align: center;
+    color: white;
+  }
+  
+/*Footer*/
+/* Footer CSS */
+.footer {
+  background-color: #c1e3fa4f;
+  padding: 20px 0;
+  font-size: medium;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 250px;
+}
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+.footer-section ul li a {
+  color: #456272f6;
+  text-decoration:none;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+.footer-bottom p {
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .features-policies {
+    flex-direction: column;
+  }
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  .features-policies {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-logo{
+   width: 10%;
+    height: 10%;
+    border-radius: 90%;
+    object-fit: cover; 
+    padding-inline: 8px;
+}
+
+.features-policies-resources-support .grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .features-policies-resources-support .grid {
+    grid-template-columns: 1fr;
+  }
+}
