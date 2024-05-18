@@ -565,3 +565,147 @@ body, html {
     grid-template-columns: 1fr;
   }
 }
+/* Internship_tips1*/
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #6ecceeef, #d6ecf4ef, #4ca5c5d4,#36b1dea9);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #9fc5d365;
+  border-radius: 10px;
+}
+
+.blog-post {
+  margin-bottom: 40px;
+}
+
+.blog-post h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  
+}
+
+.blog-post section {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.blog-post section:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+.blog-post section:nth-child(odd) {
+  animation-delay: 1s;
+}
+
+.blog-post h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.foot-intern1 {
+  background-color: #33333384;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.foot-resume2{
+  background-color: #33333384;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.foot-networking{
+  background-color: #33333384;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.foot-resume1{
+  background-color: #33333384;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
