@@ -34,13 +34,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
          <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="">Login/Signup</a>
+                <a class="nav-link" href="/login">Login/Signup</a>
             </li>
              <li class="nav-item">
-                 <a class="nav-link" href="">Get Referrals</a>
+                 <a class="nav-link" href="/referral">Get Referrals</a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="">Refer a candidate</a>
+                 <a class="nav-link" href="/refer">Refer a candidate</a>
              </li>
              <li class="nav-item">
                  <a class="nav-link" href="">Resume review</a>
@@ -51,10 +51,12 @@
        <div class="homepage">
         <div class="interactive-screen">
           <div class="flowchart">
-            <button class="block" id="block1">Give Referrals</button>
-            <button class="block" id="block2">Get Referrals</button>
-            <button class="block" id="block3">Resume review</button>
-            <button class="block" id="block4">Join us</button>
+             <div class="flowchart">
+            <button class="block" id="block1" onclick="window.location.href='/refer'">Refer Someone</button>
+            <button class="block" id="block2" onclick="window.location.href='/referral'">Get Referrals</button>
+            <button class="block" id="block3" onclick="window.location.href='/resume-review'">Review resume</button>
+            <button class="block" id="block4" onclick="window.location.href='/login'">Join Us</button>
+        </div>
             <!-- Add more blocks as needed -->
             
           </div>
@@ -306,8 +308,8 @@
           <div>
             <h3>Features</h3>
             <ul>
-              <li><a href="#">Get Referral</a></li>
-              <li><a href="#">Give Referral</a></li>
+              <li><a href="/referral">Get Referral</a></li>
+              <li><a href="refer">Give Referral</a></li>
               <li><a href="#">Resume Review</a></li>
             </ul>
           </div>
