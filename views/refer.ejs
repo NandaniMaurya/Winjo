@@ -1,0 +1,54 @@
+<!-- refer.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer a Candidate</title>
+    <link rel="stylesheet" href="/css/referral.css"><!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Floating objects -->
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+    </div>
+    <div class="home-button">
+        <a href="/" class="home-link">← Home</a>
+    </div>
+    <div class="referral-container" style = "width: 600px;" >
+        <h1>Refer a Candidate</h1>
+        <form action="/refer" method="POST">
+            <div class="input-wrapper">
+                <input type="text" name="employee_name" placeholder="Employee Name" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="email" name="email" placeholder="Employee email" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="company" placeholder="Current Company" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="work_experience" placeholder="Work Experience (Years)" required>
+            </div>
+            <div class="input-wrapper">
+                <select name="Experience_level" required>
+                    <option value="" disabled selected>Experience Level</option>
+                    <option value="Intern">Intern</option>
+                    <option value="NCG">NCG</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Lead">Lead</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Principal">Principal</option>
+                </select>
+            </div>
+            <button type="submit">Submit details</button>
+        </form>
+    </div>
+</body>
+</html>

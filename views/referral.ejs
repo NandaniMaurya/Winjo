@@ -1,0 +1,81 @@
+<!-- referral.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Referral</title>
+   
+    <link rel="stylesheet" href="/css/referral.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="background">
+        <!-- Floating objects -->
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+    </div>
+    <div class="home-button">
+        <a href="/" class="home-link">← Home</a>
+    </div>
+    <div class="referral-container" style = "width: 600px;">
+        <h1>Get a Referral</h1>
+        <form action="/referral" method="POST" enctype="multipart/form-data">
+            <div class="input-wrapper">
+                <input type="text" name="candidate_name" placeholder="Candidate Name" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="mobile_no" placeholder="Mobile Number" required>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" name="job_id" placeholder="Job ID/Job Link" required>
+            </div>
+            <div class="input-wrapper">
+                <select name="company" id="company-select" required>
+                    <option value="" disabled selected>Select Company</option>
+                    <option value="Google">Google</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="input-wrapper" id="other-company-wrapper" style="display: none;">
+                <input type="text" name="other_company" id="other-company" placeholder="Specify Other Company">
+            </div>
+            
+            <div class="input-wrapper">
+                <select name="domain" required>
+                    <option value="" disabled selected>Select Domain</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                </select>
+            </div>
+            <div class="input-wrapper">
+                <input type="file" name="resume" placeholder="Upload resume" required>
+            </div>
+            <button type="submit">Submit a Referral Request</button>
+        </form>
+    </div>
+    <script>
+        // JavaScript to toggle visibility of the "Specify Other Company" field
+        document.getElementById("company-select").addEventListener("change", function() {
+            var otherCompanyWrapper = document.getElementById("other-company-wrapper");
+            if (this.value === "Others") {
+                otherCompanyWrapper.style.display = "block";
+                document.getElementById("other-company").required = true;
+            } else {
+                otherCompanyWrapper.style.display = "none";
+                document.getElementById("other-company").required = false;
+            }
+        });
+    </script>
+</body>
+</html>
