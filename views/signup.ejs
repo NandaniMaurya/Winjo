@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="/css/auth.css"> <!-- Link to your auth-specific CSS -->
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to the main WINJO CSS for consistency -->
+</head>
+<body>
+    <!-- signup.ejs example -->
+    <div class="background">
+        <!-- Floating objects -->
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+        <div class="floating-object"></div>
+    </div>
+    <div class="home-button">
+        <a href="/" class="home-link">Home</a>
+    </div>
+<div class="auth-container">
+    <h1>Sign Up</h1>
+    <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <!-- Password Field with Toggle Icon -->
+        <div class="password-wrapper">
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                <img src="/images/eye-icon.png" alt="Show/Hide" />
+            </span>
+        </div>
+
+        <!-- Confirm Password Field with Toggle Icon -->
+        <div class="password-wrapper">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+            <span class="toggle-password" onclick="togglePasswordVisibility('confirm_password')">
+                <img src="/images/eye-icon.png" alt="Show/Hide" />
+            </span>
+        </div>
+        <div class="input-wrapper">
+            <label for="userType">Sign up as:</label>
+            <select id="userType" name="userType" required>
+                <option value="referrer">Referrer</option>
+                <option value="candidate">Candidate</option>
+            </select>
+        </div>
+        <!-- Remember Me Checkbox -->
+        <div class="remember-me">
+            <input type="checkbox" id="remember_me" name="remember_me">
+            <label for="remember_me">Remember Me</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+    <a href="/login">Already have an account? Login</a>
+</div>
+
+</body>
+</html>

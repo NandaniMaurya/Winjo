@@ -1,0 +1,145 @@
+/* auth.css */
+
+/* General page styling */
+body {
+    background: linear-gradient(to right, #1a8bb7f4, #87e3faed);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for authentication forms */
+.auth-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Header styling */
+.auth-container h1 {
+    font-size: 24px;
+    color: #1a8bb7f4;
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"],
+.auth-container .input-wrapper select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.auth-container input[type="text"]:focus,
+.auth-container input[type="email"]:focus,
+.auth-container input[type="password"]:focus,
+.auth-container .input-wrapper select:focus {
+    border-color: #1a8bb7f4;
+    outline: none;
+}
+
+/* Password field wrapper for toggle icon */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input[type="password"] {
+    padding-right: 40px; /* Space for the toggle icon */
+}
+
+/* Toggle password visibility icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+}
+
+/* Remember me checkbox styling */
+.remember-me {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a8bb7f4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.auth-container button:hover {
+    background-color: #0d5f8a;
+}
+
+/* Link styling */
+.auth-container a {
+    display: block;
+    margin-top: 10px;
+    color: #1a8bb7f4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Home button styling */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #1a8bb7f4;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.home-button:hover {
+    color: #0d5f8a;
+}
+
+.home-button svg {
+    margin-right: 8px; /* Add some spacing between icon and text */
+}
+
+.home-button svg:hover {
+    transform: translateX(-5px);
+    transition: transform 0.3s ease;
+}
+
